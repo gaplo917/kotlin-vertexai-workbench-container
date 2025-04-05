@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     unzip \
     zip \
-    openjdk-11-jdk \
+    openjdk-17-jdk \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
