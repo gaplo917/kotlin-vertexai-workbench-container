@@ -14,9 +14,6 @@ RUN apt-get update && apt-get install -y \
 # Install Kotlin Jupyter kernel
 RUN pip install kotlin-jupyter-kernel
 
-# Install Kotlin kernel for Jupyter
-RUN jupyter kernelspec install --user $(pip show kotlin-jupyter-kernel | grep Location | cut -d' ' -f2)/kotlin_jupyter_kernel/kernel
-
 # Switch back to the default user
 USER jupyter
 
