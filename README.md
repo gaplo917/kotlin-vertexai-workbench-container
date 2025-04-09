@@ -40,3 +40,20 @@ To use the GitHub Container Registry, ensure you have:
 ## Using with VertexAI Workbench
 
 This container can be used as a custom container for Google Cloud VertexAI Workbench instances.
+
+Select the project and open cloud shell.
+```
+PROJECT_ID=$(gcloud config get-value project)
+
+gcloud services enable aiplatform.googleapis.com
+gcloud services enable artifactregistry.googleapis.com
+gcloud services enable cloudbuild.googleapis.com
+gcloud services enable containerfilesystem.googleapis.com
+gcloud services enable containerregistry.googleapis.com
+
+# create artifacts repository
+gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID
+
+# create build to push image to repostiory
+gcloud builds submit --config cloudbuild.yaml
+```

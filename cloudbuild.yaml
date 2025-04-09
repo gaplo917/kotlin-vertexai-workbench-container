@@ -1,0 +1,16 @@
+# Save this as cloudbuild.yaml
+steps:
+  # Step 1: Build the image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '-t',
+      'us-docker.pkg.dev/$PROJECT_ID/demo/kotlin-vertexai-workbench-container:latest',
+      '.']
+
+  # Step 3: Push to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-docker.pkg.dev/$PROJECT_ID/demo/kotlin-vertexai-workbench-container:latest']
+
+images:
+  - 'us-docker.pkg.dev/$PROJECT_ID/demo/kotlin-vertexai-workbench-container:latest'
