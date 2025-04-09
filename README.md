@@ -55,5 +55,5 @@ gcloud services enable containerregistry.googleapis.com
 gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID
 
 # create build to push image to repostiory
-gcloud builds submit --config cloudbuild.yaml
+gcloud builds submit --config cloudbuild.yaml --git-source-dir https://github.com/gaplo917/kotlin-vertexai-workbench-container
 ```
