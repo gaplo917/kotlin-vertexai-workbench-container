@@ -65,3 +65,25 @@ gcloud workbench instances create kotlin-workbench-instance \
 #### Step 4: Go to Vertex AI workbench
 
 https://console.cloud.google.com/vertex-ai/workbench/instances 
+
+
+#### Lab 1: Run Kotlin Jupyter Notebook for Gemini
+
+* Open Jupyter Lab > Terminal
+* Type `git clone https://github.com/gaplo917/awesome-kotlin-notebook/`
+* Navigate awesome-kotlin-notebook in the file browser
+* Open `google-genai-sdk/vertexai-gemini-examples.ipynb`
+
+#### Lab 2: Run Spring Boot MCP Server
+
+* Open new Terminal
+* Type `git clone https://github.com/gaplo917/kotlin-cyrpto-price-spring-mcp-server-demo`
+* Navigate `kotlin-cyrpto-price-spring-mcp-server-demo` in the file browser
+* Open `notebook.ipynb`
+
+#### Lab 3: Run Kotlin Jupyter Notebook for Langchain4j MCP Client
+
+Follow up on Lab 1:
+
+* Navigate `awesome-kotlin-notebook` in the file browser
+* Open `langchain4j/langchain4j-mcp-client-vertexai.ipynb`
