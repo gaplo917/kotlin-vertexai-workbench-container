@@ -24,12 +24,12 @@ gcloud services enable artifactregistry.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
 gcloud services enable containerfilesystem.googleapis.com
 gcloud services enable containerregistry.googleapis.com
+
 ````
 
 2.2 Create [Artifacts Repository](https://cloud.google.com/artifact-registry/docs/overview) for Kotlin Jupyter container image.
 
 ```bash
-
 # create artifacts repository
 gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID
 ```
@@ -38,6 +38,7 @@ gcloud artifacts repositories create demo --repository-format=docker --location=
 
 See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 ```bash
+# clone the repository
 git clone https://github.com/gaplo917/kotlin-vertexai-workbench-container.git
 
 cd kotlin-vertexai-workbench-container
@@ -54,7 +55,7 @@ PROJECT_ID=$(gcloud config get-value project)
 
 gcloud workbench instances create kotlin-workbench-instance \
   --location=us-central1-a \
-  --container-repository=us-docker.pkg.dev/$PROJECT_ID/kotlin-demo-repository/kotlin-vertexai-workbench-container \
+  --container-repository=us-docker.pkg.dev/$PROJECT_ID/demo/kotlin-vertexai-workbench-container \
   --container-tag=latest \
   --machine-type=n2-standard-4 \
   --project=$PROJECT_ID
