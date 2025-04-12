@@ -72,11 +72,15 @@ Step 2:
 
 ![](assets/git-clone.png)
 
-Step 3: Navigate awesome-kotlin-notebook in the file browser, open `google-genai-sdk/vertexai-gemini-examples.ipynb`
+Step 3: Type `echo $(gcloud config get-value project)` to get your project ID
+
+![](assets/proejct-id.png)
+
+Step 4: Navigate awesome-kotlin-notebook in the file browser, open `google-genai-sdk/vertexai-gemini-examples.ipynb`
 
 ![](assets/sample-screen.png)
 
-Step 4: Run the Kotlin Notebook
+Step 5: Run the Kotlin Notebook, remember to replace your project ID in one of the cell
 
 #### Lab 2: Run Spring Boot MCP Server
 
@@ -92,4 +96,5 @@ Follow up on Lab 1:
 
 * Navigate `awesome-kotlin-notebook` in the file browser
 * Open `langchain4j/langchain4j-mcp-client-vertexai.ipynb`
-* Run the Kotlin Notebook
+* Run the Kotlin Notebook, remember to replace your project ID in one of the cell
+
