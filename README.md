@@ -9,6 +9,7 @@ Select the right project and click to open the Google Cloud Shell as shown below
 
 ![](assets/step1.png)
 
+![](assets/gcp-kotlin-vertexai-workbench.png)
 
 #### Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
 
@@ -92,6 +93,9 @@ Step 5: Run the Kotlin Notebook, remember to replace your project ID in one of t
 * Start Spring Boot MCP Server and proceed to Lab 3
 
 ![](assets/spring-boot-mcp.png)
+
+![](assets/mcp-architecture.png)
+
 
 #### Lab 3: Run Kotlin Jupyter Notebook for Langchain4j MCP Client
 
