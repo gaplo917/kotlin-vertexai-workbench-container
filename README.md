@@ -38,11 +38,14 @@ See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 
 ```bash
 # clone the repository
+echo "clone the repository..."
 cd ~
 git clone https://github.com/gaplo917/kotlin-vertexai-workbench-container.git || true
 cd kotlin-vertexai-workbench-container
+git fetch --all && git reset --hard origin/main
 
 # enable services APIs
+echo "enable services APIs..."
 gcloud services enable aiplatform.googleapis.com
 gcloud services enable artifactregistry.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
@@ -53,18 +56,23 @@ gcloud services enable containerregistry.googleapis.com
 PROJECT_ID=$(gcloud config get-value project)
 
 # create artifacts repository
+echo "create artifacts repository..."
 gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID || true
 
 # create build to push image to repository
-gcloud builds submit --config cloudbuild.yaml --git-source-dir https://github.com/gaplgio917/kotlin-vertexai-workbench-container
+echo "create build to push image to repository..."
+gcloud builds submit --config cloudbuild.yaml
 
-# create workbench instance
+# create Vertex AI workbench instance
+echo "create Vertex AI workbench instance..."
 gcloud workbench instances create kotlin-workbench-instance \
   --location=us-central1-a \
   --container-repository=us-docker.pkg.dev/$PROJECT_ID/demo/kotlin-vertexai-workbench-container \
   --container-tag=latest \
   --machine-type=n2-standard-4 \
   --project=$PROJECT_ID
+  
+echo "Completed."
 ````
 
 ### Step 3: Go to Vertex AI workbench
