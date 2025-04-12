@@ -2,6 +2,8 @@
 
 This container can be used as a custom container for Google Cloud VertexAI Workbench instances.
 
+The architecture to build Vertex AI workbench container image.
+
 ![](assets/gcp-kotlin-vertexai-workbench.png)
 
 ## Lab 0: Create Vertex AI Workbench
@@ -66,27 +68,34 @@ https://console.cloud.google.com/vertex-ai/workbench/instances
 
 ## Lab 1: Run Kotlin Jupyter Notebook for Gemini
 
-Step 1: Open Jupyter Lab > Terminal
+### Step 1: Open Jupyter Lab > Terminal
 
 ![](assets/open-jupyter-lab.png)
 
 ![](assets/open-terminal.png)
 
-Step 2: 
+### Step 2: clone the repository 
+
 - Type `git clone https://github.com/gaplo917/awesome-kotlin-notebook/` for Lab 1, 3
 - Type `git clone https://github.com/gaplo917/kotlin-cyrpto-price-spring-mcp-server-demo` for Lab 3
 
 ![](assets/git-clone.png)
 
-Step 3: Type `echo $(gcloud config get-value project)` to get your project ID
+### Step 3: Get your Project ID
+
+Type `echo $(gcloud config get-value project)` to get your project ID
 
 ![](assets/proejct-id.png)
 
-Step 4: Navigate awesome-kotlin-notebook in the file browser, open `google-genai-sdk/vertexai-gemini-examples.ipynb`
+### Step 4: Open the Kotlin Jupyter Notebook
+
+Navigate `awesome-kotlin-notebook` in the file browser. Open `google-genai-sdk/vertexai-gemini-examples.ipynb`.
 
 ![](assets/sample-screen.png)
 
-Step 5: Run the Kotlin Notebook, remember to replace your project ID in one of the cell
+### Step 5: Run the Kotlin Notebook
+
+Remember to replace your project ID in one of the cell
 
 ## Lab 2: Run Spring Boot MCP Server
 
@@ -95,6 +104,8 @@ Step 5: Run the Kotlin Notebook, remember to replace your project ID in one of t
 * Start Spring Boot MCP Server and proceed to Lab 3
 
 ![](assets/spring-boot-mcp.png)
+
+The MCP Architecture
 
 ![](assets/mcp-architecture.png)
 
