@@ -40,7 +40,7 @@ gcloud services enable containerregistry.googleapis.com
 PROJECT_ID=$(gcloud config get-value project)
 
 # create artifacts repository
-gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID
+gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID || true
 
 # create build to push image to repository
 gcloud builds submit --config cloudbuild.yaml --git-source-dir https://github.com/gaplgio917/kotlin-vertexai-workbench-container
@@ -53,6 +53,8 @@ gcloud workbench instances create kotlin-workbench-instance \
   --machine-type=n2-standard-4 \
   --project=$PROJECT_ID
 ````
+
+![](assets/cloud-shell-init.png)
 
 #### Step 3: Go to Vertex AI workbench
 
