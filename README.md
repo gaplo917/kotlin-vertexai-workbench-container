@@ -4,7 +4,7 @@ This container can be used as a custom container for Google Cloud VertexAI Workb
 
 The architecture to build Vertex AI workbench container image.
 
-![](assets/gcp-kotlin-vertexai-workbench.png)
+<img src="assets/gcp-kotlin-vertexai-workbench.png" width="400">
 
 ## Lab 0: Create Vertex AI Workbench
 
@@ -13,7 +13,7 @@ The architecture to build Vertex AI workbench container image.
 Login [Google Cloud Platform](https://console.cloud.google.com/vertex-ai/workbench/instances).
 Select the right project and click to open the Google Cloud Shell as shown below. 
 
-![](assets/step1.png)
+<img src="assets/step1.png" width="400" alt="">
 
 ### Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
 
@@ -28,7 +28,7 @@ See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 
 2.4 Create Vertex AI workbench instance
 
-![](assets/cloud-shell-init.png)
+<img src="assets/cloud-shell-init.png" width="400">
 
 ```bash
 # clone the repository
@@ -70,28 +70,28 @@ https://console.cloud.google.com/vertex-ai/workbench/instances
 
 ### Step 1: Open Jupyter Lab > Terminal
 
-![](assets/open-jupyter-lab.png)
+<img src="assets/open-jupyter-lab.png" width="400">
 
-![](assets/open-terminal.png)
+<img src="assets/open-terminal.png" width="400">
 
 ### Step 2: clone the repository 
 
 - Type `git clone https://github.com/gaplo917/awesome-kotlin-notebook/` for Lab 1, 3
 - Type `git clone https://github.com/gaplo917/kotlin-cyrpto-price-spring-mcp-server-demo` for Lab 3
 
-![](assets/git-clone.png)
+<img src="assets/git-clone.png" width="400">
 
 ### Step 3: Get your Project ID
 
 Type `echo $(gcloud config get-value project)` to get your project ID
 
-![](assets/proejct-id.png)
+<img src="assets/proejct-id.png" width="400">
 
 ### Step 4: Open the Kotlin Jupyter Notebook
 
 Navigate `awesome-kotlin-notebook` in the file browser. Open `google-genai-sdk/vertexai-gemini-examples.ipynb`.
 
-![](assets/sample-screen.png)
+<img src="assets/sample-screen.png" width="400">
 
 ### Step 5: Run the Kotlin Notebook
 
@@ -103,11 +103,11 @@ Remember to replace your project ID in one of the cell
 * Open `notebook.ipynb`
 * Start Spring Boot MCP Server and proceed to Lab 3
 
-![](assets/spring-boot-mcp.png)
+<img src="assets/spring-boot-mcp.png" width="400">
 
 The MCP Architecture
 
-![](assets/mcp-architecture.png)
+<img src="assets/mcp-architecture.png" width="400">
 
 
 ## Lab 3: Run Kotlin Jupyter Notebook for Langchain4j MCP Client
