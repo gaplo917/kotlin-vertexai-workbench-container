@@ -25,7 +25,8 @@ See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 
 ```bash
 # clone the repository
-git clone https://github.com/gaplo917/kotlin-vertexai-workbench-container.git
+cd ~
+git clone https://github.com/gaplo917/kotlin-vertexai-workbench-container.git || true
 cd kotlin-vertexai-workbench-container
 
 # enable services APIs
