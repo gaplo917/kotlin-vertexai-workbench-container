@@ -1,17 +1,19 @@
-## Using with VertexAI Workbench
+# Kotlin Jupyter Kernel with Vertex AI Workbench
 
 This container can be used as a custom container for Google Cloud VertexAI Workbench instances.
 
 ![](assets/gcp-kotlin-vertexai-workbench.png)
 
-## Step 1: Select the project and open Google Cloud Shell
+## Lab 0: Create Vertex AI Workbench
+
+### Step 1: Select the project and open Google Cloud Shell
 
 Login [Google Cloud Platform](https://console.cloud.google.com/vertex-ai/workbench/instances).
 Select the right project and click to open the Google Cloud Shell as shown below. 
 
 ![](assets/step1.png)
 
-## Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
+### Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
 
 Accept and authorize to use Google Cloud Shell. Copy and paste the follow scripts. The script will do the followings
 
@@ -57,7 +59,7 @@ gcloud workbench instances create kotlin-workbench-instance \
   --project=$PROJECT_ID
 ````
 
-## Step 3: Go to Vertex AI workbench
+### Step 3: Go to Vertex AI workbench
 
 https://console.cloud.google.com/vertex-ai/workbench/instances 
 
