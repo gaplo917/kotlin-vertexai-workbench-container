@@ -2,16 +2,16 @@
 
 This container can be used as a custom container for Google Cloud VertexAI Workbench instances.
 
-#### Step 1: Select the project and open Google Cloud Shell
+![](assets/gcp-kotlin-vertexai-workbench.png)
+
+## Step 1: Select the project and open Google Cloud Shell
 
 Login [Google Cloud Platform](https://console.cloud.google.com/vertex-ai/workbench/instances).
 Select the right project and click to open the Google Cloud Shell as shown below. 
 
 ![](assets/step1.png)
 
-![](assets/gcp-kotlin-vertexai-workbench.png)
-
-#### Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
+## Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
 
 Accept and authorize to use Google Cloud Shell. Copy and paste the follow scripts. The script will do the followings
 
@@ -23,6 +23,8 @@ Accept and authorize to use Google Cloud Shell. Copy and paste the follow script
 See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 
 2.4 Create Vertex AI workbench instance
+
+![](assets/cloud-shell-init.png)
 
 ```bash
 # clone the repository
@@ -55,14 +57,12 @@ gcloud workbench instances create kotlin-workbench-instance \
   --project=$PROJECT_ID
 ````
 
-![](assets/cloud-shell-init.png)
-
-#### Step 3: Go to Vertex AI workbench
+## Step 3: Go to Vertex AI workbench
 
 https://console.cloud.google.com/vertex-ai/workbench/instances 
 
 
-#### Lab 1: Run Kotlin Jupyter Notebook for Gemini
+## Lab 1: Run Kotlin Jupyter Notebook for Gemini
 
 Step 1: Open Jupyter Lab > Terminal
 
@@ -86,7 +86,7 @@ Step 4: Navigate awesome-kotlin-notebook in the file browser, open `google-genai
 
 Step 5: Run the Kotlin Notebook, remember to replace your project ID in one of the cell
 
-#### Lab 2: Run Spring Boot MCP Server
+## Lab 2: Run Spring Boot MCP Server
 
 * Navigate `kotlin-cyrpto-price-spring-mcp-server-demo` in the file browser
 * Open `notebook.ipynb`
@@ -97,7 +97,7 @@ Step 5: Run the Kotlin Notebook, remember to replace your project ID in one of t
 ![](assets/mcp-architecture.png)
 
 
-#### Lab 3: Run Kotlin Jupyter Notebook for Langchain4j MCP Client
+## Lab 3: Run Kotlin Jupyter Notebook for Langchain4j MCP Client
 
 Follow up on Lab 1:
 
