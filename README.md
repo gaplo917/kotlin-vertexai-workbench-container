@@ -1,8 +1,8 @@
 # Kotlin Jupyter Kernel with Vertex AI Workbench
 
-This container can be used as a custom container for Google Cloud VertexAI Workbench instances.
+This container can be used as a custom container for Google Cloud Vertex AI Workbench instances.
 
-The architecture to build Vertex AI workbench container image.
+The architecture to build a Vertex AI workbench container image.
 
 <p align="center" width="100%">
 <img alt="" src="assets/gcp-kotlin-vertexai-workbench.png" width="400">
@@ -12,7 +12,7 @@ The architecture to build Vertex AI workbench container image.
 
 ### Step 1: Select the project and open Google Cloud Shell
 
-Login [Google Cloud Platform](https://console.cloud.google.com/vertex-ai/workbench/instances).
+Login to [Google Cloud Platform](https://console.cloud.google.com/vertex-ai/workbench/instances).
 Select the right project and click to open the Google Cloud Shell as shown below. 
 
 <p align="center" width="100%">
@@ -21,13 +21,13 @@ Select the right project and click to open the Google Cloud Shell as shown below
 
 ### Step 2: Create Kotlin Jupyter Vertex AI Workbench (takes 10 minutes)
 
-Accept and authorize to use Google Cloud Shell. Copy and paste the follow scripts. The script will do the followings
+Accept and authorize to use Google Cloud Shell. Copy and paste the following scripts. The script will do the following:
 
 2.1 Enable all the services in Google Cloud
 
 2.2 Create [Artifacts Repository](https://cloud.google.com/artifact-registry/docs/overview) for Kotlin Jupyter container image.
 
-2.3 Create serverless [Cloud build](https://cloud.google.com/build?hl=en) to build the image from this repository `Dockerfile`. 
+2.3 Create serverless [Cloud Build](https://cloud.google.com/build?hl=en) to build the image from this repository's `Dockerfile`. 
 See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 
 2.4 Create Vertex AI workbench instance
@@ -73,7 +73,7 @@ gcloud workbench instances create kotlin-workbench-instance \
   --project=$PROJECT_ID
   
 echo "Completed."
-````
+```
 
 ### Step 3: Go to Vertex AI workbench
 
@@ -92,7 +92,7 @@ https://console.cloud.google.com/vertex-ai/workbench/instances
 <img alt="" src="assets/open-terminal.png" width="400">
 </p>
 
-### Step 2: clone the repository 
+### Step 2: Clone the repository 
 
 - Type `git clone https://github.com/gaplo917/awesome-kotlin-notebook/` for Lab 1, 3
 - Type `git clone https://github.com/gaplo917/kotlin-cyrpto-price-spring-mcp-server-demo` for Lab 3
@@ -111,7 +111,7 @@ Type `echo $(gcloud config get-value project)` to get your project ID
 
 ### Step 4: Open the Kotlin Jupyter Notebook
 
-Navigate `awesome-kotlin-notebook` in the file browser. Open `google-genai-sdk/vertexai-gemini-examples.ipynb`.
+Navigate `awesome-kotlin-notebook/google-genai-sdk/` in the file browser. Open `vertexai-gemini-examples.ipynb`.
 
 <p align="center" width="100%">
 <img alt="" src="assets/sample-screen.png" width="400">
@@ -119,11 +119,11 @@ Navigate `awesome-kotlin-notebook` in the file browser. Open `google-genai-sdk/v
 
 ### Step 5: Run the Kotlin Notebook
 
-Remember to replace your project ID in one of the cell
+Remember to replace your project ID in one of the cells
 
 ## Lab 2: Run Spring Boot MCP Server
 
-* Navigate `kotlin-cyrpto-price-spring-mcp-server-demo` in the file browser
+* Navigate `kotlin-cyrpto-price-spring-mcp-server-demo/` in the file browser
 * Open `notebook.ipynb`
 * Start Spring Boot MCP Server and proceed to Lab 3
 
@@ -142,7 +142,7 @@ The MCP Architecture
 
 Follow up on Lab 1:
 
-* Navigate `awesome-kotlin-notebook` in the file browser
-* Open `langchain4j/langchain4j-mcp-client-vertexai.ipynb`
-* Run the Kotlin Notebook, remember to replace your project ID in one of the cell
+* Navigate `awesome-kotlin-notebook/langchain4j/` in the file browser
+* Open `langchain4j-mcp-client-vertexai.ipynb`
+* Run the Kotlin Notebook, remember to replace your project ID in one of the cells
 
