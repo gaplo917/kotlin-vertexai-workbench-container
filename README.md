@@ -38,14 +38,14 @@ See the [cloudbuild.yaml](cloudbuild.yaml) configuration.
 
 ```bash
 # clone the repository
-echo "clone the repository..."
+echo "[Step 2] Clone the repository..."
 cd ~
 git clone https://github.com/gaplo917/kotlin-vertexai-workbench-container.git || true
 cd kotlin-vertexai-workbench-container
 git fetch --all && git reset --hard origin/main
 
 # enable services APIs
-echo "enable services APIs..."
+echo "[Step 2.1] Enable services APIs..."
 gcloud services enable aiplatform.googleapis.com
 gcloud services enable artifactregistry.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
@@ -56,23 +56,24 @@ gcloud services enable containerregistry.googleapis.com
 PROJECT_ID=$(gcloud config get-value project)
 
 # create artifacts repository
-echo "create artifacts repository..."
+echo "[Step 2.2] Create artifacts repository..."
 gcloud artifacts repositories create demo --repository-format=docker --location=us --project=$PROJECT_ID || true
 
 # create build to push image to repository
-echo "create build to push image to repository..."
+echo "[Step 2.3] create build to push image to repository..."
 gcloud builds submit --config cloudbuild.yaml
 
 # create Vertex AI workbench instance
-echo "create Vertex AI workbench instance..."
+echo "[Step 2.4] create Vertex AI workbench instance..."
 gcloud workbench instances create kotlin-workbench-instance \
+  --metadata=idle-timeout-seconds=10800 \
   --location=us-central1-a \
   --container-repository=us-docker.pkg.dev/$PROJECT_ID/demo/kotlin-vertexai-workbench-container \
   --container-tag=latest \
-  --machine-type=n2-standard-4 \
+  --machine-type=e2-standard-4 \
   --project=$PROJECT_ID
   
-echo "Completed."
+echo "[Completed] You can go to https://console.cloud.google.com/vertex-ai/workbench/instances"
 ```
 
 ### Step 3: Go to Vertex AI workbench
@@ -146,3 +147,11 @@ Follow up on Lab 1:
 * Open `langchain4j-mcp-client-vertexai.ipynb`
 * Run the Kotlin Notebook, remember to replace your project ID in one of the cells
 
+
+## Completed all labs
+
+Congratulation! You have completed all the labs! Remember to delete Vertex AI instance to avoid unnecessary charges.
+
+<p align="center" width="100%">
+<img alt="" src="assets/clear-up.png" width="400">
+</p>
